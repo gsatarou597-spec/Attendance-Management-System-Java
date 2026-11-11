@@ -1,0 +1,71 @@
+SAMPLE CONSOLE OUTPUT (real run on the supplied sample data; menu text shortened to [menu])
+[menu]
+
+> 
+ID         NAME                   EMAIL                        PROGRAMME          SEM
+--------------------------------------------------------------------------------------
+S001       Asha Sharma            asha@example.com             CSE AI&ML          3
+S002       Rohan Mehta            rohan@example.com            CSE AI&ML          3
+
+[menu]
+
+> 
+ID         NAME                     DEPARTMENT
+----------------------------------------------------------
+T001       Neha Verma               CSE
+
+[menu]
+
+> 
+ID         NAME                     ROLE       DETAILS
+---------------------------------------------------------------------
+S001       Asha Sharma              STUDENT    Programme: CSE AI&ML, Semester: 3
+S002       Rohan Mehta              STUDENT    Programme: CSE AI&ML, Semester: 3
+T001       Neha Verma               TEACHER    Department: CSE
+
+[menu]
+
+> Student ID: 
+Attendance history for Asha Sharma
+DATE         STATUS       MARKED BY
+-------------------------------------
+2026-11-09   PRESENT      T001
+2026-11-10   ABSENT       T001
+2026-11-11   ABSENT       T001
+
+[menu]
+
+> Student ID: Asha Sharma (S001): 33.33% attendance across 3 marked classes.
+
+[menu]
+
+> 
+Students below 75.0% attendance
+--------------------------------
+S001 - Asha Sharma : 33.33%
+
+[menu]
+
+> 
+CLASS ATTENDANCE REPORT
+ID         STUDENT NAME                  ATTENDANCE
+----------------------------------------------------
+S001       Asha Sharma                    33.33%
+S002       Rohan Mehta                   100.00%
+
+[menu]
+
+> 
+--- Search Student by Name ---
+Name contains: 
+ID         NAME                   EMAIL                        PROGRAMME          SEM
+--------------------------------------------------------------------------------------
+S002       Rohan Mehta            rohan@example.com            CSE AI&ML          3
+
+[menu]
+
+> Class report exported to data/class_report.csv
+
+[menu]
+
+> Goodbye!
