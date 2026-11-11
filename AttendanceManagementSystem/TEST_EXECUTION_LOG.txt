@@ -1,0 +1,41 @@
+ATTENDANCE MANAGEMENT SYSTEM - LOCAL TEST EXECUTION LOG
+Execution date: 11 November 2026
+Environment: OpenJDK 21, scripted console sessions (input piped into Main)
+Compilation: javac -Xlint:all -d out src/com/cu/attendance/*.java
+Compilation result: PASS (zero warnings)
+
+TC-01 Register a new student: PASS
+  Observed: "Student registered successfully."
+TC-02 Register duplicate student ID: PASS
+  Observed: "Operation failed: A student with this ID already exists."
+TC-03 Mark attendance with valid IDs: PASS
+  Observed: "Attendance saved successfully." (after an invalid date and an invalid status were re-prompted)
+TC-04 Mark same student/date again: PASS
+  Observed: "Operation failed: Attendance already exists for this student on 2026-11-09."
+TC-05 Use unknown student ID: PASS
+  Observed: "Operation failed: Student ID was not found."
+TC-06 Enter invalid date: PASS
+  Observed: "Use the date format YYYY-MM-DD." then the next valid date was accepted.
+TC-07 Calculate 18 attended of 20 (16 PRESENT, 2 LATE, 2 ABSENT): PASS
+  Observed: "Test Ninety (S010): 90.00% attendance across 20 marked classes."
+TC-08 Restart application: PASS
+  Observed: students, teachers and attendance saved in one run were listed in the next run.
+TC-09 View all users and roles: PASS
+  Observed: STUDENT and TEACHER rows printed through User references (displayInfo()).
+TC-10 Update a student, view list, delete the student: PASS
+  Observed: updated name/email/semester shown in the list; after deletion the student was gone.
+TC-11 Search student by name: PASS
+  Observed: "asha" returned Asha Sharma; "zzz" returned "No matching students."
+TC-12 Teacher update and delete rules: PASS
+  Observed: update saved; deleting a teacher who had marked attendance was rejected; deleting a teacher with no records succeeded.
+TC-13 Export class report to CSV: PASS
+  Observed: data/class_report.csv created with a header and one row per student.
+TC-14 Input validation: PASS
+  Observed: future date, invalid email, name containing digits, invalid status and semester 13 were each rejected and re-prompted.
+EXTRA Corrupt data file ("S1|OnlyTwoFields" in students.txt): PASS
+  Observed: "Unable to load data: Corrupt line in students.txt: S1|OnlyTwoFields" (no crash).
+EXTRA End of input (Ctrl+D / Ctrl+Z): PASS
+  Observed: "Input closed. Exiting." (no stack trace).
+
+Note: console output from these runs is included in the case study (Appendix C) and as PNG files in
+Documentation/Screenshots. Complete the personal cover-page fields (name, UID, section, submitted to, session) before submission.

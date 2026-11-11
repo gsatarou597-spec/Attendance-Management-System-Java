@@ -1,0 +1,2 @@
+S001|Asha Sharma|asha@example.com|CSE AI&ML|3
+S002|Rohan Mehta|rohan@example.com|CSE AI&ML|3
